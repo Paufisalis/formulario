@@ -1,0 +1,33 @@
+<br>
+<h1>Tabla</h1>
+<br>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">cod</th>
+      <th scope="col">Detail</th>
+      <th scope="col">Category</th>
+      <th scope="col">Value</th>
+      <th scope="col">Discount</th>
+      <th scope="col">Tax</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sales.each do |sale| %>
+    <tr>
+      <td><%=sale.cod%></td>
+      <td><%=sale.detail%></td>
+      <td><%=sale.category%></td>
+      <td><%=sale.value%></td>
+      <td><%=sale.discount%></td>
+      <td><%=sale.tax%></td>
+      <td><%=sale.total%></td>
+    </tr>
+    <%end%>
+  </tbody>
+</table>
+<br>
+<%= link_to 'Back', sales_new_path, class:"btn btn-info" %>
